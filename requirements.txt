@@ -1,0 +1,12 @@
+Flask
+requests
+numpy
+joblib
+keras
+tensorflow-cpu
+pillow
+lightgbm
+scikit-learn
+seaborn
+
+
