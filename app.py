@@ -7,7 +7,7 @@ import joblib
 from keras.applications.vgg16 import VGG16
 from keras.preprocessing import image as keras_image
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 # Load the LightGBM model
 model = joblib.load('xray_lightgbm.pkl')
@@ -20,7 +20,7 @@ for layer in vggmodel.layers:
     layer.trainable = False
 
 
-@app.route('/predict', methods=['POST'])
+@application.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
         try:
@@ -65,4 +65,4 @@ def predict():
         return jsonify({'error': 'Invalid request method'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
