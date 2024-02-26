@@ -4,5 +4,6 @@ lightgbm
 scikit-learn
 seaborn
 opencv-python-headless
+gunicorn
 
 
